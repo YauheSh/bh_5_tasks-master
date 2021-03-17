@@ -1,4 +1,4 @@
-#декоратор
+#декоратор тройной
 # def decorator(n):
 #     def inner_decorator(func):
 #         def wrapper(*args, **kwargs):

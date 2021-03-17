@@ -9,9 +9,19 @@
 """
 
 
+def log_decorator(func):
+    def wrapper(*args, **kwargs):
+        print(f'Execute {func.__name__} with args: {args} and kwargs: {kwargs}')
+        result = func(*args, **kwargs)
+        print(f'Executed {func.__name__}')
+        return result
+    return wrapper
+
+
+@log_decorator
 def hello(name: str):
-    print(f' Привет {str(name)}')
+    print(f'Hello, {name}')
 
 
-if __name__ == '__main__':
-    print(f'Привет, {hello()}')
+hello(str('Yauheni'))
+
