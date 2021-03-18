@@ -9,6 +9,7 @@
 def calc_sum(*args):
     return sum(args)
 
+
 print(calc_sum(1, 2, 3))
 
 

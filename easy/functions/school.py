@@ -22,3 +22,30 @@ school_data = {
 }
 
 
+def incr_students(SCHOOL_DATA: dict, name_class: str):
+    SCHOOL_DATA[name_class] += 1
+
+
+def decr_students(SCHOOL_DATA: dict, name_class: str):
+    SCHOOL_DATA[name_class] -= 1
+
+
+def add_class(SCHOOL_DATA: dict, name_class: str):
+    SCHOOL_DATA[name_class] = 0
+
+
+def remove_class(SCHOOL_DATA: dict, name_class: str):
+    return SCHOOL_DATA.pop(name_class)
+
+
+def calc_students(SCHOOL_DATA: dict):
+    return sum(SCHOOL_DATA.values())
+
+
+incr_students(school_data, '1b')
+decr_students(school_data, '2a')
+add_class(school_data, '7g')
+print(school_data)
+remove_class(school_data, '1a')
+print(calc_students(school_data))
+

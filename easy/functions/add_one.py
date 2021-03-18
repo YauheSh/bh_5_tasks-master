@@ -18,8 +18,10 @@ add_three(3) # 6
 def add_number(n: int):
     def wrapper(x):
         return n + x
-
     return wrapper
 
+
 add_two = add_number(2)
+
+
 print(add_two(123))

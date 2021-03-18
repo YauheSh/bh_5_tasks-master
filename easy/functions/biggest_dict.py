@@ -13,10 +13,9 @@ def biggest_dict(some_dict: dict = None, **kwargs):
     result = some_dict
     if result is None:
         result = {}
-
-
     result. update(kwargs)
     return result
+
 
 if __name__ == '__main__':
     print(biggest_dict(name=123, noname=321))
