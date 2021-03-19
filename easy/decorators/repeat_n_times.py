@@ -6,34 +6,11 @@
 """
 
 
-# def bang():
-#     print('Boom')
-#
-#
-# def repeat_n_times(func, n=3):
-#     for i in range(n):
-#         def wrapper():
-#             result = func()
-#             return result
-#     return wrapper
-#
-#
-# # dec_obj = repeat_n_times(bang)
-# #
-# # print(dec_obj())
-# @repeat_n_times
-# def bang():
-#     print('Boom')
-#
-#
-# # print(bang())
-'''
 def decorator(n):
     def inner_dec(func):
         def wrapper(*args, **kwargs):
             for i in range(n):
-            result = func(*args, **kwargs)
-            return result
+                func(*args, **kwargs)
         return wrapper
     return inner_dec
 
@@ -42,22 +19,9 @@ def decorator(n):
 def bang():
     print('Boom')
 
-'''
 
+bang()
 
-def bang():
-    print('Boom')
-
-
-def decorator(func):
-    n = 3
-    for i in range(n):
-        def wrapper():
-            return func()
-
-
-dec_func = decorator(bang)
-print(dec_func())
 
 
 
