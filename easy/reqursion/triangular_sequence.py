@@ -29,7 +29,8 @@ n = 6:
 def triangular_sequence(n, current=1):
     if current <= n:
         print(str(current) * current)
-        triangular_sequence(n, current + 1)
+        triangular_sequence(n, current+1)
 
 
-triangular_sequence(4)
+triangular_sequence(3)
+

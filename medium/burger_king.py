@@ -70,20 +70,21 @@ def onion(func):
     return wrapper
 
 
+@bread
+@onion
+@tomato
 def beef():
     return "### говядина ###"
 
 
+@bread
+@cheese
+@salad
 def chicken():
     return "|||| курица ||||"
 
 
-@bread
-@onion
-@tomato
-def function_burger():
-    return beef()
-
-
-print(function_burger())
+print(beef())
+print("\n")
+print(chicken())
 
