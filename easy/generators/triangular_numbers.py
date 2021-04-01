@@ -23,8 +23,7 @@ def triangular_numbers(n):
     tn = 0
     for i in range(n):
         tn = i * (i + 1) * 1 / 2
-        yield print(int(tn))
-    pass
+        yield int(tn)
 
 
 tn_gen = triangular_numbers(10)

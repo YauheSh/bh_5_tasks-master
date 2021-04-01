@@ -12,11 +12,13 @@ next(even_gen) -> 6
 
 
 def get_even_number(n=1):
-    for i in range(n):
-        if i == 0:
-            continue
-        else:
-            yield print(i * 2)
+    # for i in range(n):
+    #     if i == 0:
+    #         continue
+    #     else:
+    #         yield print(i * 2)
+    for i in range(2, n, 2):
+        yield i
 
 
 even_gen = get_even_number(10)

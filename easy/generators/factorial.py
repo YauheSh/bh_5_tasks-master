@@ -15,14 +15,14 @@ next(factorial_gen) -> 24
 def factorial(n):
     fact = 1
     if n == 0:
-        return print(fact)
+        return fact
     else:
         for i in range(n):
             if i == 0:
                 continue
             else:
                 fact *= i
-                yield print(fact)
+                yield fact
 
 
 factorial_gen = factorial(10)
